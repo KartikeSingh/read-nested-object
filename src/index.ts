@@ -1,4 +1,4 @@
-export default function getObjectProperty<returnType>(object: any, key: string): returnType | undefined {
+export default function getObjectProperty<returnType>(object: any, key: string | symbol): returnType | undefined {
     if (!key || typeof (key) !== "string") throw new Error("Key should be a non empty string.");
     if (key.includes("images")) console.log(object, key);
 
